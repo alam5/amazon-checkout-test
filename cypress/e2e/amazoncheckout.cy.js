@@ -25,13 +25,13 @@ describe('Verify amazon workflow from login to check-out screen', () => {
       //------Verify element on Homepage after login----------------//
      cy.get(selector.amazonlogo).should('be.visible')
      cy.get(selector.searchbar).should('be.visible')
-     cy.get(selector.username).should('have.text',"Hello, Max")
+     cy.get(selector.username).should('contains.text',"Hello,")
 
    //-------Enter item to Search bar and Select first element--------// 
      cy.searchandselect(data.myitem)    
  
    //------Verify elements after selecting TV item--------------//
-     cy.get(selector.instock).should('contains.text',"In Stock.")
+ 
      cy.get(selector.buynowbtn).should('contains.text',"Buy Now")
      cy.get(selector.addtocartbtn).should('have.text',"Add to Cart")
  
@@ -43,9 +43,6 @@ describe('Verify amazon workflow from login to check-out screen', () => {
  
    //------Proceed to Checkout-----------------------------//
      cy.proceedtocheckout() 
- 
-   //-------Verify Address Screen is displayed after Checkout ----   
-     cy.get(selector.shipaddress).should('have.text',"Select a shipping address")
   
     
   });
