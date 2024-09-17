@@ -32,7 +32,7 @@
 
     cy.get('#twotabsearchtextbox').type(item+"{enter}")
     cy.get('[data-cel-widget="search_result_2"]')
-    .contains('TV')
+    .contains('MV')
     .click()
       })  
 

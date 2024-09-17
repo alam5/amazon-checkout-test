@@ -3,8 +3,6 @@ const selector= require("../support/selectors.js")
 const data = require("../fixtures/testdata.json");
 
 
-
-
 describe('Verify amazon workflow from login to check-out screen', () => {
 
 
