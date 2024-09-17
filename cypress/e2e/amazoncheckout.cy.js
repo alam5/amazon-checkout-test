@@ -32,7 +32,8 @@ describe('Verify amazon workflow from login to check-out screen', () => {
  
      cy.get(selector.buynowbtn).should('contains.text',"Buy Now")
      cy.get(selector.addtocartbtn).should('have.text',"Add to Cart")
- 
+     cy.get(selector.addtocartbtn).should('not.be.NaN')
+     cy.get(selector.addtocartbtn).should('have.text',"Add to Cart")
    //-------Add selected item to cart---------------------//
      cy.addtocart()
  
